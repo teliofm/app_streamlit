@@ -103,7 +103,7 @@ def main():
         st.subheader(texto_colunas)
         todas_colunas = [k for k in df.columns]
         todos_tipos = [str(df.dtypes[[k]]).split(" ")[4].split('\n')[0] for k in df.columns]
-		df_todas_colunas = pd.DataFrame({"Coluna": todas_colunas, "Tipo": todos_tipos})
+        df_todas_colunas = pd.DataFrame({"Coluna": todas_colunas, "Tipo": todos_tipos})
         st.dataframe(df_todas_colunas)
         
         # Info genérica
