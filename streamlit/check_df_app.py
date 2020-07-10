@@ -101,8 +101,10 @@ def main():
         # Visão Geral das Informações do Banco de Dados 
         texto_colunas = 'Lista de Colunas (  total  ='+ str(df.shape[1])+ ')'
         st.subheader(texto_colunas)
-        for k in df.columns:
-            st.write(k)
+        todas_colunas = [k for k in df.columns]
+        todos_tipos = [str(df.dtypes[[k]]).split(" ")[4].split('\n')[0] for k in df.columns]
+		df_todas_colunas = pd.DataFrame({"Coluna": todas_colunas, "Tipo": todos_tipos})
+        st.dataframe(df_todas_colunas)
         
         # Info genérica
         st.write('* **Resumo estatísticos das colunas numéricas**')
