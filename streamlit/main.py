@@ -1,6 +1,6 @@
 #!pip install streamlit
 
-# Plinio esteve aqui
+# Plinio esteve aqui... de novo... 
 
 set CONDA_DLL_SEARCH_MODIFICATION_ENABLE=1
 
